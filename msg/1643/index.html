@@ -1,147 +1,167 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>单机魔域综合网 - 单机魔域技术博客,单机魔域教程综合网</title><meta name="author" content="不在年少"><meta name="copyright" content="不在年少"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="单机魔域综合网">
-<meta property="og:url" content="https://danjimy.github.io/index.html">
-<meta property="og:site_name" content="单机魔域综合网">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
-<meta property="article:author" content="不在年少">
-<meta property="article:tag" content="魔域单机版,单机魔域修改,单机魔域GM工具,魔域技术,魔域修改">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://danjimy.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '单机魔域综合网',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2024-05-12 10:01:07'
-}</script><script>(win=>{
-      win.saveToLocal = {
-        set: (key, value, ttl) => {
-          if (ttl === 0) return
-          const now = Date.now()
-          const expiry = now + ttl * 86400000
-          const item = {
-            value,
-            expiry
-          }
-          localStorage.setItem(key, JSON.stringify(item))
-        },
-      
-        get: key => {
-          const itemStr = localStorage.getItem(key)
-      
-          if (!itemStr) {
-            return undefined
-          }
-          const item = JSON.parse(itemStr)
-          const now = Date.now()
-      
-          if (now > item.expiry) {
-            localStorage.removeItem(key)
-            return undefined
-          }
-          return item.value
-        }
-      }
-    
-      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        script.onerror = reject
-        script.onload = script.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          script.onload = script.onreadystatechange = null
-          resolve()
-        }
 
-        Object.keys(attr).forEach(key => {
-          script.setAttribute(key, attr[key])
-        })
-
-        document.head.appendChild(script)
-      })
-    
-      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onerror = reject
-        link.onload = link.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          link.onload = link.onreadystatechange = null
-          resolve()
-        }
-        document.head.appendChild(link)
-      })
-    
-      win.activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-        if (t === 'dark') activateDarkMode()
-        else if (t === 'light') activateLightMode()
-      
-      const detectApple = () => {
-        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-          document.documentElement.classList.add('apple')
-        }
-      }
-      detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/kapian.css"><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/tutorial/"><span> 教程</span></a></li><li><a class="site-page child" href="/categories/script/"><span> 脚本</span></a></li><li><a class="site-page child" href="/categories/patch/"><span> 补丁</span></a></li><li><a class="site-page child" href="/categories/"><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="单机魔域综合网"><span class="site-name">单机魔域综合网</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/tutorial/"><span> 教程</span></a></li><li><a class="site-page child" href="/categories/script/"><span> 脚本</span></a></li><li><a class="site-page child" href="/categories/patch/"><span> 补丁</span></a></li><li><a class="site-page child" href="/categories/"><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/patch/7283.html" title="游戏界面里带链接按钮的链接地址修改">游戏界面里带链接按钮的链接地址修改</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-09T10:01:12.352Z" title="发表于 2024-05-09 18:01:12">2024-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/patch/">patch</a></span></div><div class="content">ini文件夹里面Compatible.d ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/script/14912.html" title="数据库 脚本表 type 类型解析">数据库 脚本表 type 类型解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-24T04:51:34.539Z" title="发表于 2024-04-24 12:51:34">2024-04-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/script/">script</a></span></div><div class="content">ACTION_SYS_FIRST &#x ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/9722.html" title="1655电脑端架设教程">1655电脑端架设教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-22T15:02:46.365Z" title="发表于 2024-04-22 23:02:46">2024-04-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">魔域sf1655搭建教程  
-系统配置用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/3871.html" title="单机魔域怎么给随机卷叠加到5000个">单机魔域怎么给随机卷叠加到5000个</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.490Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">打开navicat数据库管理工具
-打开c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/28914.html" title="魔域架设无MSG补丁解决办法">魔域架设无MSG补丁解决办法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.482Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">魔域架设无MSG补丁解决办法客户端补丁一 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/35160.html" title="单机魔域骑宠超过110星后不能骑修改方法">单机魔域骑宠超过110星后不能骑修改方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.478Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">有部分端的骑宠超过110星就不能骑了，打 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/62821.html" title="单机魔域魔石商店添加物品教程">单机魔域魔石商店添加物品教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.476Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">添加物品数据库
-打开数据库管理工具，打开 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/63787.html" title="单机修改人物出生地与转职变性系统的方法">单机修改人物出生地与转职变性系统的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.473Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">修改人物出生地在cq_action找到8 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/tutorial/46591.html" title="修改魔域数据库物品名称过长不显示">修改魔域数据库物品名称过长不显示</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.470Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tutorial/">tutorial</a></span></div><div class="content">宠物名称过长就显示不全的情况打开Navi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/script/24670.html" title="单机魔域物品叠加与拆分脚本（含教程）">单机魔域物品叠加与拆分脚本（含教程）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-20T12:51:08.468Z" title="发表于 2024-04-20 20:51:08">2024-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/script/">script</a></span></div><div class="content">
-  1bdd7c9dfbcf355f6 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">不在年少</div><div class="author-info__description"></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"><i class="📑"></i><span>登陆  注册  发布文章</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><font  color=red size=4>需要什么直接在上面搜索框里搜，最快速度找到需要的东西</font></div></div><div class="sticky_layout"><div class="card-widget user-map" id="user-map"><div class="item-headline"><i class="fas fa-heartbeat"></i><span>访客地图</span></div><div class="item-content"><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5V2tOKp8qAdRM-i8eu7ETTO9ugt5uKbbG-U7Yj8uMl8"></script></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 不在年少</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://butterfly.js.org">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/styles/fish.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="img/icon_.png">
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<title>神火端1643</title>
+<style type="text/css">
+<!--
+.STYLE2 {color: #FFFFFF}
+-->
+</style>
+<table width="720" align="center" bordercolor="#000000" background="img/body.jpg">
+  <tr>
+    <th scope="col"><p><img src="img/bg_01.jpeg" width="720" height="60" border="0"></p>
+<!--       <table width="720" border="0" align="center">
+        <tr>
+          <th bgcolor="#990000" scope="col">服务器名称</th>
+          <th bgcolor="#990000" scope="col">服务器状态</th>
+          <th bgcolor="#990000" scope="col">游戏介绍</th>
+          <th bgcolor="#990000" scope="col">游戏网站</th>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">天天游戏一区</td>
+          <td bgcolor="#FFFF00">新区正在火爆开启中</td>
+          <td bgcolor="#FFFF00">回忆十年的体验</td>
+          <td bgcolor="#FFFF00">点击查看</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFF00">&nbsp;</td>
+          <td bgcolor="#FFFF00">&nbsp;</td>
+          <td bgcolor="#FFFF00">&nbsp;</td>
+          <td bgcolor="#FFFF00">&nbsp;</td>
+        </tr>
+      </table>  -->     </th>
+  </tr>
+  <tr>
+    <td><table width="720" bgcolor="#CCCCFF">
+      <tr>
+        <th width="127" scope="col"><img src="img/khd.png" width="120" height="120"></th>
+        <th width="557" bordercolor="0" scope="col"><p>此客户端完美解决新手不会打补丁的问题</p>
+          <p>下载地址：<a href="https://wws.lanzoux.com/iZWCTk0bdyd" target="_blank">点击这里下载</a> 新端客户端_my_7623_圣器现世</p>
+          <p>备用下载地址：<a href="https://wws.lanzoux.com/iP77bk3nc6j" target="_blank">点击这里下载</a></p></th>
+      </tr>
+    </table>
+      <table width="720" border="0" bgcolor="#FF0000">
+        <tr>
+          <th width="132" scope="col"><img src="img/bbk.png" width="120" height="120" /></th>
+          <th width="578" scope="col"><a href="down/banben/1643banben.html" target="_blank">点击这里进入下载游戏版本</a></th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="51"><table width="723" border="1">
+        <tr>
+          <th width="713" scope="row"><table width="365" border="1" align="left" bordercolor="#333333">
+            <tr>
+              <th colspan="2" bgcolor="#999999" scope="col"><img src="img/gjxz.png" alt="1111111111111" width="318" height="62"></th>
+            </tr>
+            <tr>
+              <td width="152" bgcolor="#CCCCFF"><a href="https://wws.lanzoux.com/i5N7Vkm056d" target="_blank">服务端</a></td>
+              <td width="197" bgcolor="#CCCCFF"><a href="down/scq/scq.html" target="_blank">登录器生成器</a></td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF"><a href="down/gm/gm.html" target="_blank">gm工具</a></td>
+              <td bgcolor="#CCCCFF"><a href="down/qdweb/qdweb.html" target="_blank">启动web服务</a></td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF"><a href="down/Navicat/Navicat.html" target="_blank">数据库管理工具</a></td>
+              <td bgcolor="#CCCCFF"><a href="down/SQLqd/SQLqd.html" target="_blank">mysql强制启动</a></td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF"><a href="down/jbbjq/jbbjq.html" target="_blank">万能脚本编辑器</a></td>
+              <td bgcolor="#CCCCFF"><a href="down/notepad/notepad.html" target="_blank">文本编辑器</a></td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+              <td bgcolor="#CCCCFF">&nbsp;</td>
+            </tr>
+          </table>
+            <table width="340" height="99" border="1" align="right">
+              <tr>
+                <td colspan="2"><img src="img/bdxz.png" width="318" height="62" /></td>
+              </tr>
+              <tr bgcolor="#CCCCCC">
+                <td><a href="https://wwke.lanzoub.com/iZpgH0q9j6bc" target="_blank">修复黑屏</a></td>
+                <td>修复卡在欢迎页</td>
+              </tr>
+              <tr bgcolor="#CCCCCC">
+                <td>修复传送卡死</td>
+                <td>修复乱码</td>
+              </tr>
+              <tr>
+                <td colspan="2"><img src="img/mt.jpg" width="340" height="178" /></td>
+              </tr>
+            </table></th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><table width="720" border="1">
+      <tr>
+        <th colspan="2" scope="col"><img src="img/xsjc.png" width="318" height="69"></th>
+        </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">架设教程</td>
+        <td bgcolor="#FFFFFF">新端单机架设视频教程<a href="https://wwp.lanzoub.com/i63Y80dzw07i" target="_blank">点击观看</a></span></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">新手教程</td>
+        <td bgcolor="#FFFFFF"><a href="jiaocheng/pcdjbb/pcdjbb.html" target="_blank">单机魔域添加非坐骑飞行宝宝补丁视频教程</a></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">新手教程</td>
+        <td bgcolor="#FFFFFF"><a href="jiaocheng/rgxsz/rgxsz.html" target="_blank">手机客户端热更新软件设置视频教程</a></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">新手教程</td>
+        <td bgcolor="#FFFFFF"><a href="jiaocheng/httjbb/httjbb.html" target="_blank">互通版添加宝宝补丁视频教程</a></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center"><span class="STYLE2">Copyright  2021-3099 [PC Console Game] All Rights Reserved. <a href="http://aaua.gitee.io/my/" target="_blank">雷鸣大陆新版单机交流基地</a></span></td>
+  </tr>
+</table>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
