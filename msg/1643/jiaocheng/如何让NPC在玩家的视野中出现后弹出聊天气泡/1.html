@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+setTimeout(checker, 1000);
+</script><link rel="stylesheet" type="text/css" href="min.css">
+ 
+    <title>如何让NPC在玩家的视野中出现后弹出聊天气泡</title>
+
+<body id="scrapbook" class="mt-entry-archive one-column">
+<script>
+if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent)) document.body.classList.add('mobile');
+
+</script>
+<div id="container">
+<div id="container-inner">
+<div id="content">
+<div id="content-inner">
+<div id="alpha">
+<div id="alpha-inner">
+<div id="entry-311" class="entry-asset asset hentry">
+<article class="hentry">
+<h1 id="page-title" 
+class="asset-name entry-title">如何让NPC在玩家的视野中出现后弹出聊天气泡</h1>
+<div class="asset-meta">
+<p class="vcard author">作者：<a href="https://aaua.gitee.io/my/" target="_blank">来自网友的分享</a></p></div>
+<div class="asset-content entry-content" id="main-content">
+
+<p>相信有的小伙伴们已经看到有的魔域单机版中的NPC出现在玩家的视野中后，会触发出聊天气泡，看起来相当个性，那么如何开启这个功能呢，接下来就跟着小编来一探究竟吧。</p>
+
+<p>222222222222222</p>
+
+<p>其实这个功能的开启并不难，首先必须要单机版1.6.4.3以上的版本才支持，低于这个版本的其他魔域单机版是还不支持的，所以我们首先要准备好一份1.6.4.3的版本才行。</p>
+<p><br data-filtered="filtered" />
+</p>
+<p>   然后我们在客户端中ini目录里面会发现一个名为saywordinfo.ini的配置文件，其实这个就是相关带有自动气泡回话npc的相关配置，打开后很多小伙伴一脸闷逼表示看不懂，这里我就简单的给大家说明一下具体要如何配置。</p>
+<p><br data-filtered="filtered" />
+</p>
+<p>   [1]</p>
+<p>；每添加一个这个id递增一位</p>
+<p>IDLook=123880</p>
+<p>；对应数据库NPC的lookface</p>
+<p>Distance=10</p>
+<p>；字面意思为高度</p>
+<p>ChgMode=1</p>
+<p>；模式，目前不知道什么意思，估计是轮播的意思</p>
+<p>Amount=5</p>
+<p>；轮播项目数</p>
+<p>Text1=小店新开哦！|Offset|150</p>
+<p>；第一段会话气泡</p>
+<p>；文本末尾的 |Offset|150 这个意思我不太明白，之前测试的时候 调整 Distance=10 气泡会在很高的位置 改成-10无反应 5以下也没有反应</p>
+<p>加了这个 显示正常 高度正常</p>
+<p>字面意思是     抵消;弥补;补偿</p>
+<p>Time1=10000</p>
+<p>；时间，不知道是显示时间，还是轮播的时间</p>
+<p>ChgTime1=180000</p>
+<p>；同上</p>
+<p>Text2=本店新到一批野生奥特曼，不过来看一看？|Offset|150</p>
+<p>Time2=10000<br data-filtered="filtered" />
+  ChgTime2=180000</p>
+<p>Text3=优惠大酬宾，买幻兽送O型兽！|Offset|150<br data-filtered="filtered" />
+  Time3=10000<br data-filtered="filtered" />
+  ChgTime3=180000<br data-filtered="filtered" />
+  Text4=见到你真高兴！|Offset|150<br data-filtered="filtered" />
+  Time4=10000<br data-filtered="filtered" />
+  ChgTime4=180000<br data-filtered="filtered" />
+  Text5=听说了吗？打鹿角兽爆灵魂晶石哦！|Offset|150<br data-filtered="filtered" />
+  Time5=10000<br data-filtered="filtered" />
+  ChgTime5=180000</p>
+<p><br data-filtered="filtered" />
+</p>
+<p>   配置好后保存，重新登录游戏后当npc出现在玩家的视野中，就会自动触发已配置好的会话气泡，是不是觉得很神奇？</p>
+<p><br data-filtered="filtered" />
+</p>
+<p>注意：这个文件需要 3DRole.dll 支持，1如果你的版本补丁这个文件版本号低的话，游戏中也是没有反应的哦。</p>
+                                                               
+</body>
+</html>

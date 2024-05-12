@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+setTimeout(checker, 1000);
+</script><link rel="stylesheet" type="text/css" href="min.css">
+ 
+    <title>在单机版魔域中添加一个新NPC完整教程</title>
+
+<body id="scrapbook" class="mt-entry-archive one-column">
+<script>
+if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent)) document.body.classList.add('mobile');
+
+</script>
+<div id="container">
+<div id="container-inner">
+<div id="content">
+<div id="content-inner">
+<div id="alpha">
+<div id="alpha-inner">
+<div id="entry-311" class="entry-asset asset hentry">
+<article class="hentry">
+<h1 id="page-title" 
+class="asset-name entry-title">在单机版魔域中添加一个新NPC完整教程</h1>
+<div class="asset-meta">
+<p class="vcard author">作者：<a href="https://aaua.gitee.io/my/" target="_blank">来自网友的分享</a></p></div>
+<div class="asset-content entry-content" id="main-content">
+
+<p><img src="1.png" width="582" height="532" /></p>
+
+<p>我们先找一个npc的模型文件，新建一个文件夹npc_castweapon为了方便我们把把模型、贴图、以及头像全部放到这个文件夹里面。全部弄好以后，我们把这个文件夹放到客户端c3/npc里面，因为这里主要存放的是游戏的npc，方便我们以后更改查找。
+</p>
+
+<p><img src="2.png" width="513" height="344" /></p>
+
+<p>然后我们来配置npc的头像
+头像配置在客户端ani/NpcFace.ANI中</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml"><span class="hljs-tag">1.[Face999]
+2.;999这个id就是以后我们数据库需要调用的id
+3.FrameAmount=1
+4.;资源数，目前不支持
+5.Frame0=c3/npc/npc_castweapon/castweapon.dds
+6.;后面这些是资源路径</span></code></pre></div>
+<p>然后我们来配置npc的模型以及动作<br data-filtered="filtered" />
+主要有以下文件控制</p>
+<p>3dmotion.ini<br data-filtered="filtered" />
+  3dobj.ini<br data-filtered="filtered" />
+  3DSimpleObj.ini<br data-filtered="filtered" />
+  3dTexture.ini<br data-filtered="filtered" />
+  armor.ini<br data-filtered="filtered" />
+  npc.ini</p>
+
+<p>3dobj.ini<br data-filtered="filtered" />
+配置模型</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml">12345100=c3/npc/npc_castweapon/1.C3<br />12345101=c3/npc/npc_castweapon/2.C3</code></pre>
+</div>
+<p>3dTexture.ini<br data-filtered="filtered" />
+配种模型贴图</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml"><span class="hljs-tag"></span></code>12345100=c3/npc/npc_castweapon/1.dds<br />12345101=c3/npc/npc_castweapon/2.dds</pre>
+</div>
+<p>3DSimpleObj.ini<br data-filtered="filtered" />
+  这里也就是定义683模型的c3文件和dds文件<br data-filtered="filtered" />
+后面的armor.ini和这里一个意思</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml"><span class="hljs-tag"></span></code>[ObjIDType683]<br />PartAmount=2<br />Part0=12345100<br />Texture0=12345100<br />Part1=12345101<br />Texture1=12345101</pre>
+</div>
+<p>由于这个模型是两部分组成，所以这里要写PartAmount=2，表明由两部分</p>
+<p>armor.ini<br data-filtered="filtered" />
+这个同3DSimpleObj.ini差不多的意思照着写就可以了</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml">[683000000]<br />Part=2<br />Mesh0=12345100<br />Texture0=12345100<br />MixTex0=0<br />MixOpt0=0<br />Asb0=5<br />Adb0=6<br />Material0=default<br />Mesh1=12345101<br />Texture1=12345101<br />MixTex1=0<br />MixOpt1=0<br />Asb1=5<br />Adb1=6<br />Material1=default<br /><span class="hljs-tag"></span></code></pre></div>
+<p>npc.ini<br data-filtered="filtered" />
+这里就是游戏中的npc属性了</p>
+<p>[NpcType9105]<br data-filtered="filtered" />
+  Name=红胡子<br data-filtered="filtered" />
+  SimpleObjID=683 <br data-filtered="filtered" />
+  StandByMotion=0683000100 <br data-filtered="filtered" />
+  BlazeMotion=0683000190 <br data-filtered="filtered" />
+  BlazeMotion1=0683000190 <br data-filtered="filtered" />
+  BlazeMotion2=0683000190 <br data-filtered="filtered" />
+  RestMotion=0683000101 <br data-filtered="filtered" />
+  Effect=springred<br data-filtered="filtered" />
+  ZoomPercent=100<br data-filtered="filtered" />
+  Note=纳邦德学院·大锻造师</p>
+<p>有很多小伙伴不知道这里都是什么意思，我这里简单说一下<br data-filtered="filtered" />
+[NpcType9105]</p>
+<p>；这里的9105就是我们后面数据库lookface调用的模型，末尾还要加上方位例如91050 为正前【方位为8个也就是0-7】<br data-filtered="filtered" />
+</p>
+<p>Name=npc的名字<br data-filtered="filtered" />
+  SimpleObjID=npc的模型<br data-filtered="filtered" />
+  StandByMotion=正常动作<br data-filtered="filtered" />
+  BlazeMotion=点燃动作<br data-filtered="filtered" />
+  BlazeMotion1=点燃动作1<br data-filtered="filtered" />
+  BlazeMotion2=点燃动作2<br data-filtered="filtered" />
+  RestMotion=复位动作<br data-filtered="filtered" />
+  Effect=光效<br data-filtered="filtered" />
+  ZoomPercent=缩放比例<br data-filtered="filtered" />
+  Note=npc备注名称</p>
+<p>全部完成后，我们在数据库里面也要加一个，在数据库中有两个表，一种为动态npc也就是可以随时在游戏中删除的活动npc，一种为固定npc也就是游戏中重要的npc。</p>
+<div class="hljs xml">
+<pre class="brush:xhtml;">
+<code class="hljs language-xml">INSERT INTO `top1`.`cq_npc` (`id`, `ownerid`, `playerid`, `name`, `type`, `lookface`, `length`, `fat`, `idxserver`, `mapid`, `cellx`, `celly`, `task0`, `task1`, `task2`, `task3`, `task4`, `task5`, `task6`, `task7`, `data0`, `data1`, `data2`, `data3`, `datastr`, `linkid`, `life`, `maxlife`, `base`, `sort`, `itemid`, `size_front`, `size_back`, `size_left`, `size_right`) VALUES ('1054', '0', '0', '红胡子', '0001', '91050', '0', '0', '-1', '1000', '0255', '0406', '4709050', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0', '0', '0', '0', '无', '0000', '00', '00', '0000', '01', '0000', '0000', '0000', '0000', '0000');<span class="hljs-tag"></span></code></pre></div>
+<p>看一下效果</p>
+<p><img src="3.png" width="723" height="384" /></p>
+                                                               
+</body>
+</html>
