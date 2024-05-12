@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+<link href="css/include.css" rel="stylesheet" type="text/css" >
+<link href="css/comm.css" rel="stylesheet" type="text/css" >
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+	<!-- 网页标题 -->
+<title>怎么实现单机魔域相同物品在同一格显示设置</title>
+</head>
+
+<body>
+<div class="container con clearfix" >
+   <div class="row arctile">
+    <div class="col-md-8">   
+       <section class="post-content">
+		<!-- 内容页面文章由此开始编写，以下为文章编辑区 -->
+		<!-- 内容页面文章由此开始编写，以下为文章编辑区 -->
+		<!-- 这里的【<br/>】标签表示换行 -->
+
+1643的apk： 
+
+<br/>反编译apk，找到assets/ui/7005.ini删除里面的职业配置相关内容 例如： [20] CtrlType=CMyButton x=84 y=31 Width=92 Height=79 Background=newplayer_magicianbtn Click=Yes （这个表示魔法师创建按钮）直接删除就行了，其他职业也是一样，不要的直接删除 
+
+<br/><br/><br/>1655的apk：
+
+ <br/>反编译apk，找到assets/ui/7005.ini打开文件修改配置文件： [20] （魔法师职业ID为20） CtrlType=CMyButton x=84 y=31 Width=92 Height=79 Background=newplayer_magicianbtn（魔法师按钮） Click=Yes //上面为职业配置，主要看职业和ID数字 [ctrlgroup] count=1 groupid0=0 ctrlcount0=5 （这里表示显示的职业图标5表示5个职业,对应下面的id0_0到id0_4的5行配置） id0_0=20 （对应职业配置ID为20，魔法师） id0_1=10 （对应职业配置ID 一样的看上面配置里面的ID数字 id0_2=25 （对应职业配置ID） id0_3=30 （对应职业配置ID） id0_4=35 （对应职业配置ID） 总结：直接修改就行了，这些都是配置好了的，相当于就是删除多余的显示按钮ID，要注意的就是ctrlcount0=5这里5这个数字就是你显示的几个职业，然后下面的ID配置删除多余的就行了
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      </section><!--文章内容区-->
+   </div> 
+</div><!-- 内容 -->
+<script>
+function nav_top()
+	{
+	var nav_h=$('.navbar-fixed-top').outerHeight();
+	$('.con').css('margin-top',nav_h);
+	}
+	nav_top(); //--------------------------顶部距离
+	
+	function nav_foot()
+	{
+	 var b_w=$(window).outerWidth();
+	 console.log(b_w);
+	 if(b_w<=767)	
+	 {
+		$('footer').css('margin-bottom',70); 
+	 }else
+	 {
+		 $('footer').css('margin-bottom',0); 
+	 }
+	}
+	nav_foot()// -------------底部距离
+	
+	$(window).resize(function(){
+		nav_top();
+		nav_foot(); 
+	});
+</script>
+      
+</body>
+</html>

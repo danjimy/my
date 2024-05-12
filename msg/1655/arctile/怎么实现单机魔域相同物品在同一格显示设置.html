@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+<link href="css/include.css" rel="stylesheet" type="text/css" >
+<link href="css/comm.css" rel="stylesheet" type="text/css" >
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+	<!-- 网页标题 -->
+<title>怎么实现单机魔域相同物品在同一格显示设置</title>
+</head>
+
+<body>
+
+ 
+<div class="container con clearfix" >
+   	<div class="postion">
+    <p>
+     <span class="glyphicon glyphicon-home"></span> &nbsp;
+     <a href="javascript:;">首页</a> > 怎么实现单机魔域相同物品在同一格显示设置
+     </p>
+   </div><!--当前位置-->
+   <div class="row arctile">
+    <div class="col-md-8">
+       <div class="text-center">
+		<!-- 文章内容正文区 -->
+        </div>
+       <section class="post-content">
+<!-- 
+		内容页面文章由此开始编写，以下为文章编辑区
+		内容页面文章由此开始编写，以下为文章编辑区-->
+ 
+ 
+首先打开my数据库<br/><br/>
+找到 cq_itemtype 表<br/><br/>
+找到相应的物品，然后找到 amount_limit 值<br/><br/>
+比如一个6星的礼包，把amount_limit值修改为10，那么10个6星礼包就会只占一个背包空间！可以根据自己的需求修改
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      </section><!--文章内容区-->
+   </div> 
+</div><!-- 内容 -->
+<script>
+function nav_top()
+	{
+	var nav_h=$('.navbar-fixed-top').outerHeight();
+	$('.con').css('margin-top',nav_h);
+	}
+	nav_top(); //--------------------------顶部距离
+	
+	function nav_foot()
+	{
+	 var b_w=$(window).outerWidth();
+	 console.log(b_w);
+	 if(b_w<=767)	
+	 {
+		$('footer').css('margin-bottom',70); 
+	 }else
+	 {
+		 $('footer').css('margin-bottom',0); 
+	 }
+	}
+	nav_foot()// -------------底部距离
+	
+	$(window).resize(function(){
+		nav_top();
+		nav_foot(); 
+	});
+</script>
+      
+</body>
+</html>
